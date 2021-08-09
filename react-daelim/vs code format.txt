@@ -1,0 +1,6 @@
+extension 설정
+eslint 
+prettier
+기존 settings -> format javascript 기능을 꺼줘야 충돌이 안남 
+path
+reactjs snippet

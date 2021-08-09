@@ -1,0 +1,24 @@
+https://docs.microsoft.com/ko-kr/windows/wsl/install-win10 wsl2
+우분투 
+
+xfce 환경으로 설치방법
+sudo apt update && sudo apt -y upgrade
+sudo apt -y install xfce4
+sudo apt-get install xfce4-goodies
+sudo apt-get install xrdp
+sudo sed -i 's/3389 기존/3390 바꾸는거/g' /etc/xrdp/xrdp.ini
+sudo sed -i 's/max_bpp=32/#max_bpp=32\nmax_bpp=128/g' /etc/xrdp/xrdp.ini
+sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini
+echo xfce4-session > ~/.xsession
+nano /etc/xrdp/startwm.sh
+주석처리
+#test -x /etc/X11/Xsession && exec /etc/X11/Xsession  
+#exec /bin/sh /etc/X11/Xsession
+입력
+startxfce4
+
+서버 시작 sudo /etc/init.d/xrdp start
+서버 끄기 service xrdp stop su(root 임시 허용) 사용 루트로 접근 exit 나오기
+
+:wq
+

@@ -4,3 +4,6 @@ prettier
 기존 settings -> format javascript 기능을 꺼줘야 충돌이 안남 
 path
 reactjs snippet
+
+
+ function this는동적으로 결정 ()=>arrow func 는 정적으로 결정

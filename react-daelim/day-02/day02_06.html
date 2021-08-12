@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    var lastName = "김"
+    var firstName = "대림"
+
+    var ticketAgent = "예술의 전당"
+    var event = "BTS"
+    var quantity = 3
+    var price = 10000
+
+    var ticket = `${firstName}님께,
+
+    ${event} 티켓 ${quantity} 건을 구매해주셔서 감사합니다.
+
+    주문 상세 정보:
+
+     ${lastName} ${firstName}
+     ${quantity} x ${price} = ${quantity*price} 공연 : ${event}
+
+    공연 시작 30분 전까지 배부처에서 티켓을 수령하시기 바랍니다.
+
+    감사합니다.
+
+    ${ticketAgent} 드림
+    `
+    console.log(ticket)
+</script>
+</body>
+</html>

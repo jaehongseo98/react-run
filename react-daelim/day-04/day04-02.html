@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>React</title>
+        <!-- 리액트 사용 준비 -->
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="target"></div>
+        <script>
+            // const dish = React.createElement('h1', null, '구운연어');
+            // const dish2 = React.createElement(
+            //     'h2',
+            //     { id: 'recipe-0' },
+            //     '구운연어2',
+            // );
+            const dish = React.createElement(
+                'ul',
+                null,
+                React.createElement('li', null, '연어'),
+                React.createElement('li', null, '연어1'),
+                React.createElement('li', null, '연어2'),
+                React.createElement('li', null, '연어3'),
+                React.createElement('li', null, '연어4'),
+            );
+            ReactDOM.render(dish, document.getElementById('target'));
+            console.log('dish', dish);
+        </script>
+    </body>
+</html>

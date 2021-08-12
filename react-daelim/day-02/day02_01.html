@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <style>
+            #container {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            #container > div {
+                width: 10px;
+                height: 10px;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container"></div>
+
+        <script>
+            var div,
+                container = document.getElementById('container');
+
+            for (var i = 0; i < 5; i++) {
+                div = document.createElement('div');
+                div.onclick = function () {
+                    alert('박스 No' + i);
+                };
+                container.appendChild(div);
+            }
+        </script>
+    </body>
+</html>

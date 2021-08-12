@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>프라미스</title>
+</head>
+<body>
+<script>
+    const getMembers = cnt => new Promise(
+        (resolve, rejects) => {
+            const api = `https://api.randomuser.me/?nat=US&results=${cnt}`
+            const request = new XMLHttpRequest()
+            request.open('GET', api)
+            request.onload = () =>
+                (request.status === 200 ) ? resolve(JSON.parse(request.response).results) : rejects(Error(request.statusText))
+            request.onerror = (err) => rejects(err)
+            request.send()
+        })
+    getMembers(4).then(
+        members => console.log(members),
+        err => console.error(new Error("랜덤유저미 사이트에서 멤버들을 로딩할 수 없습니다"))
+    )
+</script>
+</body>
+</html>

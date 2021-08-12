@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>React</title>
+        <!-- 리액트 사용 준비 -->
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="target"></div>
+        <script>
+            const items = ['연어', '참치'];
+            const ind = React.createElement(
+                'ul',
+                { className: 'ind' },
+                items.map((ind, idx) =>
+                    React.createElement('li', { key: idx }, ind),
+                ),
+            );
+            ReactDOM.render(ind, document.getElementById('target'));
+            console.log('ind', ind);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>리액트 DOM</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+<div id="react-container"></div>
+<script>
+    const dish = React.createElement(
+        "ul",
+        { className : "ingredients"},
+        React.createElement("li", null, "연어 500그램"),
+        React.createElement("li", null, "잣 1 컵"),
+        React.createElement("li", null, "버터 상추 2 컵"),
+        React.createElement("li", null, "옐로 스쿼시(Yellow Squash, 호박의 한 종류) 1개"),
+        React.createElement("li", null, "올리브 오일 1/2 컵"),
+        React.createElement("li", null, "마늘 3 쪽")
+    )
+    ReactDOM.render(dish, document.getElementById('react-container'))
+    console.log('dish', dish)
+</script>
+</body>
+</html>

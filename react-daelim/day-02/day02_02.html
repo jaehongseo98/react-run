@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>var and let</title>
+</head>
+<body>
+<script>
+    // var 변수의 영역은 if블럭 안으로 제한되지 않는다
+    var subject = "자바스크립트"
+    if (subject) {
+        var subject = "리액트"
+        console.log('if문 안쪽 스코프', subject)
+    }
+    console.log('if문 바깥 스코프', subject)
+</script>
+</body>
+</html>

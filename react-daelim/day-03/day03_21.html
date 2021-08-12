@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+<h2 id="target"></h2>
+<script>
+    var target = document.getElementById("target")
+    var wrap = document.createElement("div")
+    var headline = document.createElement("h1")
+
+    wrap.id = "welcome"
+    headline.innerText = "Hello World"
+
+    wrap.appendChild(headline)
+    target.appendChild(wrap)
+</script>
+</body>
+</html>

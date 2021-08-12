@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>리액트 DOM</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react-dom-factories@1.0.2/index.js"></script>
+</head>
+<body>
+<div id="react-container"></div>
+<script>
+    const { render } = ReactDOM
+
+    const items = [
+        "연어 500그램",
+        "잣 1 컵",
+        "버터 상추 2 컵",
+        "옐로 스쿼시(Yellow Squash, 호박의 한 종류) 1개",
+        "올리브 오일 1/2 컵",
+        "마늘 3 쪽"
+    ]
+
+    const IngredientsList = ({ items }) => React.createElement(
+        'ul',
+        null,
+        items.map(
+            (ingredient, idx) => React.createElement('li', {key : idx}, ingredient))
+    )
+
+    const Ingredients = React.createFactory(IngredientsList)
+
+    render(
+        Ingredients({items}),
+        document.getElementById('react-container')
+    )
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>리액트 컴포넌트</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react-dom-factories@1.0.2/index.js"></script>
+</head>
+<body>
+<div id="react-container"></div>
+<script>
+    const el = ReactDOMFactories.h1(null, "라면")
+    ReactDOM.render(el, document.getElementById('react-container'))
+</script>
+</body>
+</html>

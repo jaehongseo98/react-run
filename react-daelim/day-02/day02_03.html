@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>var and let</title>
+</head>
+<body>
+<script>
+    // 2015년도에 나온 ES6의 let을 쓰면 구문적 변수 영역 규칙을 적용할 수 있다
+    // 즉, if문 안쪽의 지역변수로 사용
+    var subject = "자바스크립트"
+    if (subject) {
+        let subject = "리액트"
+        console.log('if문 안쪽 스코프', subject)
+    }
+    console.log('if문 바깥 스코프', subject)
+</script>
+</body>
+</html>
